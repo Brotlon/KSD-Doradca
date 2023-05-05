@@ -1,0 +1,35 @@
+$primary-color: #8FB011;
+$primary-gradient: linear-gradient(-45deg, #78AF13, #78AF1399, #78AF13);
+
+$black: #2A2A29;
+$black75: #2a2a29BF;
+$black50: #2A2A29BF;
+$black25: #2A2A2940;
+$black10: #2A2A291A;
+$black5: #2A2A290D;
+
+
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    font-size: 62.5%;
+    scroll-behavior: smooth;
+}
+
+button, a {
+    font-family: inherit;
+    cursor: pointer;
+}
+
+img {
+    vertical-align: middle;
+}
+
+body {
+    font-family: 'Nunito', sans-serif;
+}
