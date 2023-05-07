@@ -33,6 +33,36 @@ img {
 
 body {
     font-family: 'Nunito', sans-serif;
+    color: $black75;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-weight: 600;
+    color: $black;
+}
+
+h1 {
+    font-size: 2.9rem;
+    line-height: 48px;
+}
+
+h5 {
+    font-size: 1.8rem;
+    line-height: 30px;
+}
+
+p {
+    font-size: 1.6rem;
+    line-height: 26px;
+}
+
+.container {
+    padding: 0 1rem;
 }
 
 
@@ -45,12 +75,12 @@ body {
     top: 0;
     z-index: 9999;
     width: 100%;
-    
+
     &__wrapper {
         display: flex;
         flex-wrap: wrap;
     }
-    
+
     &__top {
         width: 100%;
         display: flex;
@@ -115,5 +145,128 @@ body {
         position: static;
         clip-path: polygon(0 0, 100% 0, 100% 107%, 0 107%);
         pointer-events: auto;
+    }
+}
+
+
+
+
+////////////////////      HERO     ////////////////////
+
+.hero {
+    padding: 1.6rem;
+    position: relative;
+    margin-top: 61px;
+
+    &::after {
+        content: '';
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        z-index: -1;
+        background-image: url('../img/header-bg-640.jpg');
+        background-size: cover;
+        opacity: 0.4;
+    }
+
+    &__wrapper {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    &__img {
+        width: 209px;
+        height: 109px;
+    }
+
+    &__h1 {
+        order: -1;
+        margin-bottom: 1.6rem;
+        max-width: 288px;
+        text-align: center;
+        text-shadow: 3px 3px 4px rgba(0, 0, 0, .2);
+    }
+}
+
+
+
+////////////////////      USŁUGI     ////////////////////
+
+.services {
+    margin-top: 1.6rem;
+
+    &__row {
+        display: flex;
+    }
+
+    &__box {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 50%;
+        height: 112px;
+        text-decoration: none;
+    }
+
+    &__box-svg {
+        height: 3.2rem;
+    }
+
+    &__box-h5 {
+        margin-top: 1.6rem;
+    }
+}
+
+
+
+
+////////////////////      WPROWADZENIE     ////////////////////
+
+.introduction {
+    padding-top: 1.6rem;
+
+    &__box {
+        position: relative;
+    }
+
+    &__img {
+        position: absolute;
+        top: 0;
+        left: 0;
+        transform: translateY(-160px);
+        z-index: -1;
+        background-image: url('../img/introduction_640.jpg');
+        background-size: cover;
+        border-radius: 24px;
+        width: 100%;
+        height: 250px;
+    }
+
+    &__text-box {
+        margin-top: 160px;
+        padding: 0.8rem 1.6rem;
+        border: 1px solid $black10;
+        background-color: #fcfcfc;
+        border-radius: 16px;
+    }
+
+    &__h5 {
+        margin-bottom: 0.8rem;
+    }
+
+    &__h5-line {
+        display: block;
+    }
+
+    &__h5-colored-letter {
+        color: $primary-color;
+    }
+
+    &__h5-comma {
+        display: none;
     }
 }
