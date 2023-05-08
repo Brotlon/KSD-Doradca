@@ -19,6 +19,7 @@ $black5: #2A2A290D;
 html {
     font-size: 62.5%;
     scroll-behavior: smooth;
+    scroll-padding-top: 77px;
 }
 
 button,
@@ -51,9 +52,19 @@ h1 {
     line-height: 48px;
 }
 
+h3 {
+    font-size: 2.3rem;
+    line-height: 37px;
+}
+
 h5 {
     font-size: 1.8rem;
     line-height: 30px;
+}
+
+h6 {
+    font-size: 1.6rem;
+    line-height: 26px;
 }
 
 p {
@@ -64,6 +75,100 @@ p {
 .container {
     padding: 0 1rem;
 }
+
+.text-bold {
+    font-weight: 600;
+}
+
+.section {
+    margin-top: 4.8rem;
+    padding-top: 1.6rem;
+}
+
+.h3-box {
+    display: flex;
+    align-items: center;
+    margin-bottom: 2.4rem;
+}
+
+.h3-line {
+    height: 2px;
+    width: 100%;
+    background-image: $primary-gradient;
+}
+
+.h3 {
+    padding: 0 1.6rem;
+}
+
+.content {
+    &__paragraph {
+        margin-bottom: 1.6rem;
+    }
+
+    &__img-box {
+        position: relative;
+        margin-top: 2.4rem;
+        margin-bottom: 2.4rem;
+        aspect-ratio: 570 / 407;
+        width: 100%;
+    }
+
+    &__img {
+        margin-left: auto;
+        margin-right: auto;
+        aspect-ratio: 506 / 343;
+        width: 89%;
+        border-radius: 16px;
+        background-size: cover;
+        background-position: center;
+    }
+
+    &__img-shadow-one {
+        position: absolute;
+        top: 14%;
+        right: 0;
+        z-index: -1;
+        width: 85%;
+        aspect-ratio: 482 / 317;
+        border-radius: 16px;
+        background-color: $black10;
+    }
+
+    &__img-shadow-two {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        z-index: -1;
+        width: 85%;
+        aspect-ratio: 482 / 317;
+        border-radius: 16px;
+        background-color: $black10;
+    }
+
+    &__list-title {
+        margin-bottom: 0.8rem;
+        color: $black;
+        font-weight: 600;
+    }
+
+    &__list {
+        margin-bottom: 2.4rem;
+    }
+
+    &__list-item {
+        margin-left: 1.5rem;
+        padding-left: 0.7rem;
+        font-size: 1.6rem;
+        line-height: 27px;
+
+        &::marker {
+            content: '•';
+        }
+    }
+}
+
+
 
 
 
@@ -103,8 +208,7 @@ p {
     }
 
     &__burger-btn {
-        padding: 1.6rem;
-        padding-right: 1rem;
+        padding: 1.6rem 2rem;
         border: none;
         background-color: transparent;
     }
@@ -248,7 +352,7 @@ p {
 
     &__text-box {
         margin-top: 160px;
-        padding: 0.8rem 1.6rem;
+        padding: 1rem 2rem;
         border: 1px solid $black10;
         background-color: #fcfcfc;
         border-radius: 16px;
@@ -270,3 +374,274 @@ p {
         display: none;
     }
 }
+
+
+
+
+////////////////////      KSIĘGOWOŚĆ     ////////////////////
+
+.accountancy {
+    &__content__img {
+        background-image: url('../img/accountancy_640.jpg');
+    }
+}
+
+
+
+
+////////////////////      SZKOLENIA     ////////////////////
+
+.training {
+    &__content__img {
+        background-image: url('../img/training_640.jpg');
+    }
+}
+
+
+
+
+////////////////////      DORADZTWO     ////////////////////
+
+.advisement {
+    &__content__img {
+        background-image: url('../img/advisement_640.jpg');
+    }
+}
+
+
+
+
+////////////////////      CENY TRANSFEROWE     ////////////////////
+
+.transfer-prices {
+    &__h3 {
+        min-width: 275px;
+    }
+
+    &__content__img {
+        background-image: url('../img/transfer-prices_640.jpg');
+    }
+
+    &__content__list-title {
+        margin-top: 2.4rem;
+    }
+}
+
+
+
+
+////////////////////      O NAS     ////////////////////
+
+.aboutus {    
+    &__h3 {
+        min-width: 105px;
+    }
+
+    &__paragraph {
+        margin-bottom: 1.6rem;
+    }
+
+    &__certificate-box {
+        border: 5px solid #F4F0E9;
+        margin: 2.4rem;
+        margin-left: auto;
+        margin-right: auto;
+        width: 260px;
+    }
+
+    &__certificate-img {
+        width: 100%;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// =============================================================================
+
+@media (min-width: 406px) {
+
+    ////////////////////      WPROWADZENIE     ////////////////////
+
+    .introduction {
+        &__h5-line {
+            display: inline;
+        }
+
+        &__h5-comma {
+            display: inline;
+        }
+    }
+}
+
+
+
+
+////////////////////      KONTAKT     ////////////////////
+
+.contact {
+    &__box {
+        display: flex;
+        margin-bottom: 2.4rem;
+        border-radius: 16px;
+        background-color: $black10;
+
+        &:nth-of-type(2), &:nth-of-type(3) {
+            .contact__paragraph {
+                margin-bottom: 0;
+                padding: 1.3rem 1.6rem;
+                color: $black;
+            }
+        }
+    }
+
+    &__icon-box {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 16px;
+        width: 52px;
+        background-color: $black5;
+    }
+
+    &__svg {
+        width: 2rem;
+    }
+
+    &__text-box {
+        padding: 1.6rem 2.4rem;
+    }
+
+    &__h6 {
+        margin-bottom: 0.8rem;
+
+        &:last-of-type {
+            margin-top: 1.6rem;
+        }
+    }
+
+    &__paragraph {
+        margin-bottom: 0.2rem;
+    }
+
+    &__map-box {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 3.2rem;
+    }
+
+    &__map {
+        border: 2px solid #C9C9C9;
+        border-radius: 16px;
+        aspect-ratio: 320 / 240;
+        width: 100%;
+    }
+}
+
+
+
+////////////////////      FOOTER     ////////////////////
