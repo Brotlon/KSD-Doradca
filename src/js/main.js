@@ -1,6 +1,8 @@
 const burgerBtn = document.querySelector('.navbar__burger-btn')
 const mobileNav = document.querySelector('.navbar__links')
 
+const footerYear = document.querySelector('.footer__copyright-year')
+
 
 
 const handleMobileNav = () => {
@@ -18,6 +20,14 @@ const checkClick = e => {
 }
 
 
+const handleFooterYear = () => {
+    const currentYear = new Date().getFullYear()
+    
+    footerYear.textContent = currentYear
+}
+
+
 
 burgerBtn.addEventListener('click', handleMobileNav)
 window.addEventListener('click', checkClick)
+handleFooterYear()
