@@ -97,6 +97,7 @@ p {
 
 .h3 {
     padding: 0 1.6rem;
+    width: max-content;
 }
 
 
@@ -738,7 +739,6 @@ p {
 
     .section {
         margin-top: 8.4rem;
-        padding-top: 1.2rem;
     }
 
     .h3-box {
@@ -951,7 +951,7 @@ p {
                 margin-top: 0rem;
                 padding-left: 4rem;
                 border-left: 1px solid $black10;
-            }            
+            }
         }
 
         &__paragraph {
@@ -988,9 +988,85 @@ p {
 
 @media (min-width: 880px) {
 
+    html {
+        scroll-padding-top: 88px;
+    }
+
     .container {
         max-width: 800px;
     }
+
+
+    ////////////////////      NAWIGACJA     ////////////////////
+
+    .navbar {
+        box-shadow: 0 4px 4px #0000001A;
+
+        &__wrapper {
+            display: flex;
+            flex-wrap: nowrap;
+            justify-content: space-between;
+        }
+
+        &__top {
+            padding-left: 2rem;
+            border-bottom: none;
+            box-shadow: none;
+        }
+
+        &__logo {
+            padding-left: 2rem;
+            padding-right: 2rem;
+            height: 64px;
+            width: 144px;
+        }
+
+        &__burger-btn {
+            display: none;
+        }
+
+        &__links {
+            display: flex;
+            align-items: center;
+            position: static;
+            padding-top: 0.8rem;
+            padding-bottom: 0.8rem;
+            width: auto;
+            box-shadow: none;
+            clip-path: polygon(0 0, 100% 0, 100% 107%, 0 107%);
+            pointer-events: auto;
+        }
+
+        &__list {
+            display: flex;
+        }
+
+        &__list-item:last-of-type {
+            .navbar__list-link {
+                border-right: 1px solid $black10;
+            }
+        }
+
+        &__list-link {
+            width: max-content;
+            padding-left: 2.4rem;
+            padding-right: 2.4rem;
+            border-left: 1px solid $black10;
+        }
+    }
+
+
+    ////////////////////      HERO     ////////////////////
+
+    .hero {
+        margin-top: 6.4rem;
+
+        &__wrapper {
+            max-width: 720px;
+            margin-left: 5%;
+        }
+    }
+
 
     ////////////////////      USŁUGI     ////////////////////
 
@@ -999,7 +1075,282 @@ p {
             display: flex;
             // margin-left: 0;
             // margin-right: 0;
+        }
+
+        &__row {
+            width: 100%;
+        }
+        
+        &__column {
             justify-content: space-evenly;
+        }
+    }
+}
+
+
+// =============================================================================
+
+@media (min-width: 984px) {
+
+    html {
+        scroll-padding-top: 96px;
+    }
+
+    h1 {
+        font-size: 4.5rem;
+        line-height: 73px;
+    }
+
+    h3 {
+        font-size: 3.1rem;
+        line-height: 50px;
+    }
+
+    h5 {
+        font-size: 2.2rem;
+        line-height: 36px;
+    }
+
+    h6 {
+        font-size: 1.8rem;
+        line-height: 30px;
+    }
+
+    p {
+        font-size: 1.8rem;
+        line-height: 30px;
+    }
+
+    .container {
+        max-width: none;
+    }
+
+    .section {
+        margin-top: 11.6rem;
+    }
+
+    .h3-box {
+        margin-bottom: 4.8rem;
+    }
+
+    .h3 {
+        padding-left: 4.8rem;
+        padding-right: 4.8rem;
+    }
+
+
+    ////////////////////      HERO     ////////////////////
+
+    .hero {
+        &__wrapper {
+            margin-left: 0;
+        }
+
+        &__img {
+            width: 280px;
+            height: 146px;
+        }
+
+        &__h1 {
+            margin-left: 3.2rem;
+            max-width: 440px;
+        }
+    }
+
+
+    ////////////////////      USŁUGI     ////////////////////
+
+    .services {
+        margin-top: 3.2rem;
+
+        &__box {
+            width: 210px;
+        }
+
+        &__box-svg {
+            height: 4rem;
+        }
+    }
+
+
+    ////////////////////      WPROWADZENIE     ////////////////////
+
+    .introduction {
+        padding-top: 3.2rem;
+
+        &__img {
+            position: relative;
+            transform: none;
+            width: calc(100% - 128px);
+            height: 420px;
+            background-image: url('../img/introduction_940.jpg');
+        }
+
+        &__text-box {
+            position: absolute;
+            top: 50%;
+            right: 0;
+            transform: translateY(-50%);
+            margin: 0;
+            height: auto;
+        }
+    }
+
+
+    ////     KSIĘGOWOŚĆ, SZKOLENIA, DORADZTWO, CENY TRANSFEROWE
+
+    .content {
+        &__row {
+            display: flex;
+        }
+
+        &__column {
+            width: 50%;
+
+            &:first-child {
+                padding-right: 2rem;
+            }
+
+            &:last-child {
+                padding-left: 2rem;
+            }
+        }
+
+        &__img-box {
+            margin-top: 4.8em;
+            margin-bottom: 0;
+        }
+
+        &__list {
+            &:last-child {
+                margin-bottom: 0;
+            }
+        }
+
+        &__list-item {
+            line-height: 30px;
+        }
+    }
+
+
+    ////////////////////      CENY TRANSFEROWE     ////////////////////
+
+    .transfer-prices {
+        &__h3 {
+            min-width: 423px;
+        }
+    }
+
+
+    ////////////////////      O NAS     ////////////////////
+
+    .aboutus {
+        &__h3 {
+            min-width: 194px;
+        }
+
+        &__certificate-box {
+            width: 300px;
+            margin-left: 3.2rem;
+        }
+    }
+
+
+    ////////////////////      KONTAKT     ////////////////////
+
+    .contact {
+        &__row {
+            display: flex;
+        }
+
+        &__column {
+            width: 50%;
+            flex-direction: column;
+
+            &:first-child {
+                padding-right: 2rem;
+            }
+
+            &:last-child {
+                padding-left: 2rem;
+            }
+        }
+
+        &__box {
+            &:nth-of-type(2) {
+                margin-right: 0;
+                margin-bottom: 3.2rem;
+            }
+
+            &:last-of-type {
+                margin-left: 0;
+            }
+        }
+
+        &__text-box {
+            display: block;
+        }
+
+        &__text-column {
+            &:first-of-type {
+                margin-right: 0;
+                max-width: none;
+            }
+
+            &:last-of-type {
+                margin-top: 3.2rem;
+                padding-left: 0;
+                border: none;
+            }
+        }
+
+        &__h6 {
+            margin-bottom: 1.6rem;
+        }
+
+        &__paragraph {
+            margin-bottom: 0.8rem;
+        }
+
+        &__map-box {
+            margin-top: 0;
+            height: 100%;
+        }
+
+        &__map {
+            height: 100%;
+        }
+    }
+
+
+    ////////////////////      FOOTER     ////////////////////
+
+    .footer {
+        margin-top: 12.8rem;
+
+        &__container {
+            display: flex;
+            padding-top: 3.2rem;
+            padding-bottom: 3.2rem;
+        }
+
+        &__column {
+            width: 50%;
+
+            &:first-of-type {
+                margin-bottom: 0;
+                padding-left: 2rem;
+                border: none;
+            }
+
+            &:last-of-type {
+                order: -1;
+                padding-right: 2rem;
+            }
+        }
+
+        &__link:last-child {
+            margin-bottom: 0;
         }
     }
 }
