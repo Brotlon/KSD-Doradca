@@ -131,6 +131,11 @@ p {
         padding: 1rem;
         height: 60px;
         width: 116px;
+        transition: opacity .25s;
+
+        &:hover {
+            opacity: 0.6;
+        }
     }
 
     &__logo-img {
@@ -165,6 +170,7 @@ p {
     }
 
     &__list-link {
+        position: relative;
         display: block;
         padding: .8rem 0rem;
         color: $black;
@@ -173,6 +179,34 @@ p {
         text-decoration: none;
         text-transform: uppercase;
         line-height: 27px;
+        transition: opacity .25s;
+
+        &::before, &::after {
+            content: '';
+            position: absolute;
+            left: 0;
+            height: 1px;
+            width: 100%;
+            background-color: $black10;
+            transform: scaleX(0);
+            transition: transform .25s;
+        }
+
+        &::before {
+            top: 0;
+        }
+
+        &::after {
+            bottom: 0;
+        }
+
+        &:hover {
+            opacity: 0.6;
+
+            &::before, &::after {
+                transform: scaleX(1);
+            }
+        }
     }
 
     .show-nav {
@@ -246,6 +280,11 @@ p {
         width: 184px;
         height: 112px;
         text-decoration: none;
+        transition: transform .25s;
+
+        &:hover {
+            transform: scale(1.25);
+        }
     }
 
     &__box-svg {
@@ -549,6 +588,10 @@ p {
         margin-bottom: 1.6rem;
         color: $black75;
         text-decoration: none;
+
+        &:hover {
+            opacity: 0.7;
+        }
     }
 
     &__link,
@@ -1033,7 +1076,7 @@ p {
             padding-bottom: 0.8rem;
             width: auto;
             box-shadow: none;
-            clip-path: polygon(0 0, 100% 0, 100% 107%, 0 107%);
+            clip-path: none;
             pointer-events: auto;
         }
 
@@ -1080,7 +1123,7 @@ p {
         &__row {
             width: 100%;
         }
-        
+
         &__column {
             justify-content: space-evenly;
         }
@@ -1352,6 +1395,261 @@ p {
 
         &__link:last-child {
             margin-bottom: 0;
+        }
+    }
+}
+
+
+
+// =============================================================================
+
+@media (min-width: 1160px) {
+
+    ////////////////////      KONTAKT     ////////////////////
+
+    .contact {
+        &__column {
+            flex-direction: row;
+        }
+
+        &__box {
+            &:nth-of-type(2) {
+                margin-bottom: 0;
+                margin-right: 4rem;
+            }
+        }
+    }
+}
+
+
+
+// =============================================================================
+
+@media (min-width: 1300px) {
+
+    html {
+        scroll-padding-top: 108px;
+    }
+
+    h1 {
+        font-size: 5rem;
+        line-height: 75px;
+    }
+
+    h3 {
+        font-size: 3.5rem;
+        line-height: 53px;
+    }
+
+    h5 {
+        font-size: 2.4rem;
+        line-height: 36px;
+    }
+
+    h6 {
+        font-size: 2rem;
+        line-height: 30px;
+    }
+
+    p {
+        font-size: 2rem;
+        line-height: 30px;
+    }
+
+    .container {
+        padding-left: 0;
+        padding-right: 0;
+        max-width: 1200px;
+    }
+
+    .section {
+        margin-top: 14.8rem;
+    }
+
+    .h3-box {
+        margin-bottom: 5.6rem;
+    }
+
+    .h3 {
+        padding-left: 5.6rem;
+        padding-right: 5.6rem;
+    }
+
+
+    ////////////////////      NAWIGACJA     ////////////////////
+
+    .navbar {
+        background-color: #fff;
+
+        &__wrapper {
+            margin-left: auto;
+            margin-right: auto;
+            max-width: 1200px;
+        }
+
+        &__top {
+            padding-left: 0;
+        }
+
+        &__logo {
+            transform: translateX(-2rem);
+            width: 163px;
+            height: 72px;
+        }
+
+        &__links {
+            padding-right: 0;
+        }
+
+        &__list-link {
+            font-size: 2rem;
+            line-height: 30px;
+        }
+    }
+
+
+    ////////////////////      HERO     ////////////////////
+
+    .hero {
+        margin-top: 7.2rem;
+
+        &::before {
+            background-image: url('../img/header-bg-1920.jpg');
+        }
+
+        &__wrapper {
+            align-items: center;
+            margin-left: auto;
+            margin-right: auto;
+            max-width: 1200px;
+        }
+
+        &__img {
+            width: auto;
+            height: auto;
+        }
+    }
+
+
+    ////////////////////      USŁUGI     ////////////////////
+
+    .services {
+        margin-top: 4rem;
+    }
+
+
+    ////////////////////      WPROWADZENIE     ////////////////////
+
+    .introduction {
+        padding-top: 4rem;
+
+        &__img {
+            width: 940px;
+            height: 400px;
+        }
+
+        &__text-box {
+            width: 524px;
+            height: 250px;
+        }
+    }
+
+
+    ////     KSIĘGOWOŚĆ, SZKOLENIA, DORADZTWO, CENY TRANSFEROWE
+
+    .content {
+        &__column {
+            &:first-child {
+                padding-right: 3rem;
+            }
+
+            &:last-child {
+                padding-left: 3rem;
+            }
+        }
+
+        &__img {
+            width: 506px;
+            height: 343px;
+            aspect-ratio: auto;
+            border-radius: 32px;
+        }
+
+        &__img-shadow-one,
+        &__img-shadow-two {
+            width: 482px;
+            height: 317px;
+            aspect-ratio: auto;
+            border-radius: 32px;
+        }
+
+        &__img-shadow-one {
+            top: 58px;
+            right: 0;
+        }
+
+        &__list-item {
+            font-size: 2rem;
+            line-height: 32px;
+        }
+    }
+
+
+    ////////////////////      CENY TRANSFEROWE     ////////////////////
+
+    .transfer-prices {
+        &__h3 {
+            min-width: 481px;
+        }
+    }
+
+
+    ////////////////////      O NAS     ////////////////////
+
+    .aboutus {
+        &__h3 {
+            min-width: 222px;
+        }
+
+        &__certificate-box {
+            width: 386px;
+        }
+    }
+
+
+    ////////////////////      KONTAKT     ////////////////////
+
+    .contact {
+        &__column {
+            flex-direction: row;
+
+            &:first-child {
+                padding-right: 3rem;
+            }
+
+            &:last-child {
+                padding-left: 3rem;
+            }
+        }
+
+        &__box {
+            &:nth-of-type(2) {
+                margin-bottom: 0;
+                margin-right: 4rem;
+            }
+        }
+    }
+
+
+    ////////////////////      FOOTER     ////////////////////
+
+    .footer {
+        margin-top: 16rem;
+
+        &__link,
+        &__copyright-text {
+            font-size: 1.8rem;
+            line-height: 27px;
         }
     }
 }
