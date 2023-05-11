@@ -91,7 +91,7 @@ p {
 
 .h3-line {
     height: 2px;
-    width: 100%;
+    flex-grow: 1;
     background-image: $primary-gradient;
 }
 
@@ -455,10 +455,6 @@ p {
 ////////////////////      CENY TRANSFEROWE     ////////////////////
 
 .transfer-prices {
-    &__h3 {
-        min-width: 275px;
-    }
-
     &__content__img {
         background-image: url('../img/transfer-prices_640.jpg');
     }
@@ -474,10 +470,6 @@ p {
 ////////////////////      O NAS     ////////////////////
 
 .aboutus {
-    &__h3 {
-        min-width: 105px;
-    }
-
     &__paragraph {
         margin-bottom: 1.6rem;
     }
@@ -920,10 +912,6 @@ p {
     ////////////////////      CENY TRANSFEROWE     ////////////////////
 
     .transfer-prices {
-        &__h3 {
-            min-width: 354px;
-        }
-
         &__content__list-title {
             margin-top: 4rem;
         }
@@ -933,10 +921,6 @@ p {
     ////////////////////      O NAS     ////////////////////
 
     .aboutus {
-        &__h3 {
-            min-width: 162px;
-        }
-
         &__paragraph {
             margin-bottom: 2.4rem;
             text-align: justify;
@@ -1274,22 +1258,9 @@ p {
     }
 
 
-    ////////////////////      CENY TRANSFEROWE     ////////////////////
-
-    .transfer-prices {
-        &__h3 {
-            min-width: 423px;
-        }
-    }
-
-
     ////////////////////      O NAS     ////////////////////
 
     .aboutus {
-        &__h3 {
-            min-width: 194px;
-        }
-
         &__certificate-box {
             margin-left: 3.2rem;
             width: 300px;
@@ -1592,22 +1563,9 @@ p {
     }
 
 
-    ////////////////////      CENY TRANSFEROWE     ////////////////////
-
-    .transfer-prices {
-        &__h3 {
-            min-width: 481px;
-        }
-    }
-
-
     ////////////////////      O NAS     ////////////////////
 
     .aboutus {
-        &__h3 {
-            min-width: 222px;
-        }
-
         &__certificate-box {
             width: 386px;
         }
